@@ -39,7 +39,7 @@
 
   <!-- CONTAINER FOTO DAN TEKS BACKDROP -->
   <div class="relative w-full flex items-center justify-center min-h-[420px] md:min-h-[550px] my-4">
-    
+
     <!-- TEKS DI BELAKANG FOTO (Layer Z-0 dengan Efek Pop Up & Glow) -->
     <h1 class="absolute z-0 w-full text-center text-5xl font-black uppercase tracking-tighter sm:text-7xl md:text-9xl lg:text-[11rem] select-none text-white/15 drop-shadow-2xl leading-none transition-transform duration-700 hover:scale-105">
       <span id="typed-text" data-part1="PORTOFOLIO " data-part2="GUAHHHHH"></span><span class="animate-pulse text-secondary-container">|</span>
@@ -47,15 +47,15 @@
 
     <!-- WRAPPER FOTO ORANG (Layer Z-10 dengan Efek Pop Up / Zoom Hover) -->
     <div class="group relative z-10 mx-auto w-80 md:w-[620px] lg:w-[720px] max-w-full overflow-hidden transition-all duration-500 ease-out hover:scale-105 hover:-translate-y-2">
-      
+
       <!-- FOTO ORANG -->
-      <img 
-        src="<?= asset('image/jacket.png') ?>" 
-        alt="Profile" 
-        class="w-full h-auto object-cover block relative z-10 transition-transform duration-500 group-hover:scale-105" 
+      <img
+        src="<?= asset('image/jacket.png') ?>"
+        alt="Profile"
+        class="w-full h-auto object-cover block relative z-10 transition-transform duration-500 group-hover:scale-105"
       />
 
-      <!-- EFEK GRADIENT PUDAR (Presisi di bagian bawah baju) -->      
+      <!-- EFEK GRADIENT PUDAR (Presisi di bagian bawah baju) -->
     </div>
   </div>
 
@@ -78,8 +78,8 @@
       <div class="grid auto-rows-[400px] grid-cols-1 gap-gutter md:auto-rows-[500px] md:grid-cols-12">
         <a class="scroll-animate group relative overflow-hidden border border-transparent bg-surface transition duration-700 hover:border-secondary-container md:col-span-8" href="#">
           <!-- 1. Gambar dengan Filter Cinematic / Efek Film -->
-          <img class="h-full w-full object-cover grayscale contrast-125 sepia-[0.25] brightness-90 transition-all duration-1000 ease-out group-hover:scale-[1.03] group-hover:grayscale-0 group-hover:sepia-0 group-hover:brightness-100 group-hover:contrast-100" 
-               src="<?= asset('image/peace_03.jpg') ?>" 
+          <img class="h-full w-full object-cover grayscale contrast-125 sepia-[0.25] brightness-90 transition-all duration-1000 ease-out group-hover:scale-[1.03] group-hover:grayscale-0 group-hover:sepia-0 group-hover:brightness-100 group-hover:contrast-100"
+               src="<?= asset('image/peace_03.jpg') ?>"
                alt="Brutalist monolithic observatory">
           <!-- 2. Overlay Grain & Vignette Cinematic -->
           <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20 opacity-90 transition-opacity duration-700 group-hover:opacity-60"></div>
@@ -95,7 +95,7 @@
           <img class="h-full w-full object-cover grayscale contrast-125 brightness-95 sepia-[0.20] transition-all duration-1000 ease-out group-hover:scale-[1.03] group-hover:grayscale-0 group-hover:sepia-0 group-hover:brightness-100 group-hover:contrast-100"
                 src="<?= asset('image/dobermanfeed_03.jpg') ?>"
                 alt="Nexus data platform">
-  
+
           <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/20 opacity-90 transition-opacity duration-700 group-hover:opacity-60"></div>
           <div class="absolute bottom-0 left-0 w-full translate-y-2 p-8 transition duration-500 group-hover:translate-y-0">
             <span class="mb-3 inline-block border border-outline bg-surface/50 px-3 py-1 text-label text-on-surface-variant backdrop-blur-md">T-Shirt Design</span>
@@ -115,7 +115,7 @@
         </a>
 
         <a class="project scroll-reveal group relative overflow-hidden border border-transparent bg-surface transition duration-700 hover:border-secondary-container md:col-span-7" href="#">
-          <img class="h-full w-full object-cover grayscale contrast-125 sepia-[0.25] brightness-90 transition-all duration-1000 ease-out group-hover:scale-[1.03] group-hover:grayscale-0 group-hover:sepia-0 group-hover:brightness-100 group-hover:contrast-100" 
+          <img class="h-full w-full object-cover grayscale contrast-125 sepia-[0.25] brightness-90 transition-all duration-1000 ease-out group-hover:scale-[1.03] group-hover:grayscale-0 group-hover:sepia-0 group-hover:brightness-100 group-hover:contrast-100"
           src="<?= asset('image/medusa.jpg') ?>"
           alt="Void residence interior">
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
@@ -135,47 +135,57 @@
         <h4 class="text-display-mobile tracking-tighter md:text-display">Software Skill</h4>
       </div>
     </section>
-<!-- Dock Software Slide Section -->
-<!-- Dock Software Slide Section -->
-<section class="flex flex-col items-center justify-center py-16">    
-  <!-- Track Slide Icon -->
-  <div id="dock-track" class="scroll-reveal flex items-center justify-center gap-3 md:gap-4">
-    
-    <!-- Photoshop -->
-    <button type="button" 
-            class="app-icon group relative flex h-20 w-20 md:h-24 md:w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-[#002140] transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-110 hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] active:scale-95 focus:outline-none" 
-            title="Photoshop">
-      <img src="<?= asset('image/ps.png') ?>" alt="Photoshop" class="h-12 w-12 md:h-16 md:w-16 object-contain pointer-events-none transition-transform duration-300 group-hover:scale-110" />
-    </button>
+<section class="logo-ticker-section">
+  <div class="container">
 
-    <!-- Illustrator -->
-    <button type="button" 
-            class="app-icon group relative flex h-20 w-20 md:h-24 md:w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-[#320001] transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-110 hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] active:scale-95 focus:outline-none" 
-            title="Illustrator">
-      <img src="<?= asset('image/ai.png') ?>" alt="Illustrator" class="h-12 w-12 md:h-16 md:w-16 object-contain pointer-events-none transition-transform duration-300 group-hover:scale-110" />
-    </button>
+    <div class="slider-container">
+      <div class="slider-track track-left">
+        <div class="logo-card"><img src="<?= asset('image/ai.png') ?>" alt="Adobe Illustrator"></div>
+        <div class="logo-card"><img src="<?= asset('image/capcut.png') ?>" alt="CapCut"></div>
+        <div class="logo-card"><img src="<?= asset('image/figma.png') ?>" alt="Figma"></div>
+        <div class="logo-card"><img src="<?= asset('image/procreate.png') ?>" alt="Procreate"></div>
+        <div class="logo-card"><img src="<?= asset('image/ps.png') ?>" alt="Adobe Photoshop"></div>
+        <div class="logo-card"><img src="<?= asset('image/capcut.png') ?>" alt="CapCut"></div>
+        <div class="logo-card"><img src="<?= asset('image/figma.png') ?>" alt="Figma"></div>
+        <div class="logo-card"><img src="<?= asset('image/procreate.png') ?>" alt="Procreate"></div>
+        <div class="logo-card"><img src="<?= asset('image/ps.png') ?>" alt="Adobe Photoshop"></div>
 
-    <!-- Figma -->
-    <button type="button" 
-            class="app-icon active group relative flex h-20 w-20 md:h-24 md:w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-[#000000] transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-110 hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] active:scale-95 focus:outline-none" 
-            title="Figma">
-      <img src="<?= asset('image/figma.png') ?>" alt="Figma" class="h-12 w-12 md:h-16 md:w-16 object-contain pointer-events-none transition-transform duration-300 group-hover:scale-110" />
-    </button>
+        <div class="logo-card"><img src="<?= asset('image/ai.png') ?>" alt="Adobe Illustrator"></div>
+        <div class="logo-card"><img src="<?= asset('image/capcut.png') ?>" alt="CapCut"></div>
+        <div class="logo-card"><img src="<?= asset('image/figma.png') ?>" alt="Figma"></div>
+        <div class="logo-card"><img src="<?= asset('image/procreate.png') ?>" alt="Procreate"></div>
+        <div class="logo-card"><img src="<?= asset('image/ps.png') ?>" alt="Adobe Photoshop"></div>
+        <div class="logo-card"><img src="<?= asset('image/capcut.png') ?>" alt="CapCut"></div>
+        <div class="logo-card"><img src="<?= asset('image/figma.png') ?>" alt="Figma"></div>
+        <div class="logo-card"><img src="<?= asset('image/procreate.png') ?>" alt="Procreate"></div>
+        <div class="logo-card"><img src="<?= asset('image/ps.png') ?>" alt="Adobe Photoshop"></div>
+      </div>
 
-    <!-- Procreate -->
-    <button type="button" 
-            class="app-icon group relative flex h-20 w-20 md:h-24 md:w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-[#242424] transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-110 hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] active:scale-95 focus:outline-none" 
-            title="Procreate">
-      <img src="<?= asset('image/procreate.png') ?>" alt="Procreate" class="h-12 w-12 md:h-16 md:w-16 object-contain pointer-events-none transition-transform duration-300 group-hover:scale-110" />
-    </button>
+      <div class="slider-track track-right">
+        <div class="logo-card"><img src="<?= asset('image/ps.png') ?>" alt="Adobe Photoshop"></div>
+        <div class="logo-card"><img src="<?= asset('image/procreate.png') ?>" alt="Procreate"></div>
+        <div class="logo-card"><img src="<?= asset('image/figma.png') ?>" alt="Figma"></div>
+        <div class="logo-card"><img src="<?= asset('image/capcut.png') ?>" alt="CapCut"></div>
+        <div class="logo-card"><img src="<?= asset('image/ai.png') ?>" alt="Adobe Illustrator"></div>
+        <div class="logo-card"><img src="<?= asset('image/ps.png') ?>" alt="Adobe Photoshop"></div>
+        <div class="logo-card"><img src="<?= asset('image/procreate.png') ?>" alt="Procreate"></div>
+        <div class="logo-card"><img src="<?= asset('image/figma.png') ?>" alt="Figma"></div>
+        <div class="logo-card"><img src="<?= asset('image/capcut.png') ?>" alt="CapCut"></div>
+        <div class="logo-card"><img src="<?= asset('image/ai.png') ?>" alt="Adobe Illustrator"></div>
 
-    <!-- CapCut -->
-    <button type="button" 
-            class="app-icon group relative flex h-20 w-20 md:h-24 md:w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-[#ffffff] transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-110 hover:shadow-[0_15px_30px_rgba(0,0,0,0.5)] active:scale-95 focus:outline-none" 
-            title="CapCut">
-      <img src="<?= asset('image/capcut.png') ?>" alt="CapCut" class="h-12 w-12 md:h-16 md:w-16 object-contain pointer-events-none transition-transform duration-300 group-hover:scale-110" />
-    </button>
-    
+        <div class="logo-card"><img src="<?= asset('image/ps.png') ?>" alt="Adobe Photoshop"></div>
+        <div class="logo-card"><img src="<?= asset('image/procreate.png') ?>" alt="Procreate"></div>
+        <div class="logo-card"><img src="<?= asset('image/figma.png') ?>" alt="Figma"></div>
+        <div class="logo-card"><img src="<?= asset('image/capcut.png') ?>" alt="CapCut"></div>
+        <div class="logo-card"><img src="<?= asset('image/ai.png') ?>" alt="Adobe Illustrator"></div>
+        <div class="logo-card"><img src="<?= asset('image/ps.png') ?>" alt="Adobe Photoshop"></div>
+        <div class="logo-card"><img src="<?= asset('image/procreate.png') ?>" alt="Procreate"></div>
+        <div class="logo-card"><img src="<?= asset('image/figma.png') ?>" alt="Figma"></div>
+        <div class="logo-card"><img src="<?= asset('image/capcut.png') ?>" alt="CapCut"></div>
+        <div class="logo-card"><img src="<?= asset('image/ai.png') ?>" alt="Adobe Illustrator"></div>
+      </div>
+    </div>
+
   </div>
 </section>
 

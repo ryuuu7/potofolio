@@ -149,43 +149,120 @@ body {
   border-color: #0266ff;
 }
 
-/* ==========================================================================
-   Dock & App Icon (Bubble Slide) Styles
-   ========================================================================== */
-#dock-container {
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7),
-              0 0 25px rgba(255, 255, 255, 0.05);
+/* Container Utama Pembatas Halaman */
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Section Wrapper */
+.logo-ticker-section {
+  width: 100%;
+  padding: 60px 0;
+  /* PENTING: Supaya fade overlay menutupi dari ujung ke ujung */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Slider Inner Container */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Efek Fade Transparan Kiri & Kanan (Dipindah ke .logo-ticker-section) */
+.logo-ticker-section::before,
+.logo-ticker-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px; /* Lebar efek pudar di pinggir */
+  height: 120%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logo-ticker-section::before {
+  left: 0;
+  background: linear-gradient(to right, #000102 20%, transparent 100%);
+}
+
+.logo-ticker-section::after {
+  right: 0;
+  background: linear-gradient(to left, #000000 20%, transparent 100%);
+}
+
+/* Track Animasi */
+.slider-track {
+  display: flex;
+  width: max-content;
+  gap: 20px; /* Jarak antar logo card */
+}
+
+.track-left {
+  animation: scrollLeft 25s linear infinite;
+}
+
+.track-right {
+  animation: scrollRight 25s linear infinite;
+}
+
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+/* Kartu Logo (Rasio 1:1) */
+.logo-card {
+  width: 120px;
+  height: 120px;
+  aspect-ratio: 1 / 1;
+  background: #000000;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  padding: 16px;
+  box-sizing: border-box;
+  flex-shrink: 0; /* PENTING: Agar box tidak gepeng */
+}
+
+.logo-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
   transition: all 0.3s ease;
 }
 
-/* Ukuran Standar (Tidak Diklik / Mengecil) */
-.app-icon {
-  transform: scale(0.9);
-  opacity: 0.75;
-  filter: brightness(0.9);
-  cursor: pointer;
-  transform-origin: center center;
-  user-select: none;
-  -webkit-user-select: none;
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
-              opacity 0.25s ease,
-              filter 0.25s ease,
-              box-shadow 0.25s ease;
-}
-
-/* Hover State saat belum aktif */
-.app-icon:hover {
+.logo-card:hover img {
+  filter: grayscale(0%);
   opacity: 1;
-  filter: brightness(1);
-  transform: scale(1.05) translateY(-2px);
 }
 
-/* State Membesar Saat Di-Click (Active) */
-.app-icon.active {
-  transform: scale(1.35) translateY(-6px) !important;
-  opacity: 1 !important;
-  filter: brightness(1.1) !important;
-  z-index: 30;
-  box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.7), 
-              0 0 20px rgba(56, 189, 248, 0.5);
+/* Keyframe Gerakan */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Menghitung pergeseran 50% + setengah nilai gap (10px) agar tidak patah */
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(calc(-50% - 10px));
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

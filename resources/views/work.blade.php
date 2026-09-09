@@ -113,6 +113,5 @@
   </footer>
 
   <script src="<?= asset('js/animations.js') ?>"></script>
-  <script src="<?= asset('js/lightbox.js') ?>"></script>
 </body>
 </html>
